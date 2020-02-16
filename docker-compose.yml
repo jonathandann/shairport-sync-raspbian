@@ -1,0 +1,11 @@
+version: "3"
+services:
+  shairport:
+    image: jonathandann/shairport-raspbian
+    container_name: shairport
+    network_mode: host
+    restart: unless-stopped
+    devices:
+      - /dev/snd:/dev/snd
+    environment:
+      - AIRPLAY_NAME=Office
